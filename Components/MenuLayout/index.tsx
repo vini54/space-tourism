@@ -31,7 +31,7 @@ export const MenuLayout = ({ children }: props) => {
         </div>
       </header>
 
-      <main>{children}</main>
+      {children}
     </Container>
   );
 };

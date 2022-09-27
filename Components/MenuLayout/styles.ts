@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   position: relative;
+  max-width: 100vw;
+  overflow: hidden;
 
   & > header {
     position: absolute;

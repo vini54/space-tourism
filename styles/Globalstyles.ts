@@ -12,6 +12,10 @@ a {
   box-sizing: border-box;
   user-select: none;
   -webkit-user-drag: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
