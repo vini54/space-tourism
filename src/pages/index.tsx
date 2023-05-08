@@ -1,6 +1,6 @@
 import homeStyle from "@/styles/homeStyles.module.css";
 import { NextPageWithLayout } from "./_app";
-import { MenuLayout } from "@/Components/MenuLayout";
+import { MenuLayout } from "@/components/MenuLayout";
 
 const Home: NextPageWithLayout = () => {
   return (
