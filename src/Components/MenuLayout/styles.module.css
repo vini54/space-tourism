@@ -1,0 +1,104 @@
+.header {
+  width: 100%;
+  position: absolute;
+  top: 36px;
+  left: 0;
+}
+
+.nav {
+  backdrop-filter: blur(8px);
+  position: relative;
+}
+
+.nav .activeLink {
+  border-bottom: 2px solid #fff;
+}
+
+.nav a {
+  padding: 32px 0;
+  font-family: var(--barlowCondensed-font);
+  font-weight: 300;
+  letter-spacing: 2.4px;
+  border-bottom: 2px solid transparent;
+  flex-shrink: 0;
+}
+
+.nav a:hover:not(.activeLink) {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.nav a strong {
+  font-weight: 600;
+  margin-right: 4px;
+}
+
+.nav::before {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 2px;
+  left: -300px;
+  top: 50%;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.burgerBtn {
+  display: none;
+}
+
+.burgerNav {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.burgerNav a {
+  padding: 0 2rem;
+  border-left: 2px solid transparent;
+}
+
+.burgerNav .activeLink {
+  border-left: 2px solid #fff;
+}
+
+.burgerNav a:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+@media screen and (max-width: 1024px) {
+  .nav::before {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .header {
+    top: 0;
+  }
+
+  .nav {
+    padding: 0 2.5rem;
+  }
+
+  .nav a {
+    padding: 1.75rem 0;
+  }
+
+  .nav strong {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    padding: 24px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .burgerBtn {
+    display: flex;
+  }
+}
