@@ -90,6 +90,7 @@ export const MenuLayout = ({ children }: Layoutprops) => {
               className={`${
                 pathname === "/" ? styles.activeLink : null
               } transition-colors ease-in`}
+              onClick={() => setIsOpenMenu(false)}
             >
               HOME
             </Link>
@@ -99,6 +100,7 @@ export const MenuLayout = ({ children }: Layoutprops) => {
               className={`${
                 pathname === "/destination" ? styles.activeLink : null
               } transition-colors ease-in`}
+              onClick={() => setIsOpenMenu(false)}
             >
               DESTINATION
             </Link>
@@ -108,6 +110,7 @@ export const MenuLayout = ({ children }: Layoutprops) => {
               className={`${
                 pathname === "/crew" ? styles.activeLink : null
               } transition-colors ease-in`}
+              onClick={() => setIsOpenMenu(false)}
             >
               CREW
             </Link>
@@ -117,6 +120,7 @@ export const MenuLayout = ({ children }: Layoutprops) => {
               className={`${
                 pathname === "/technology" ? styles.activeLink : null
               } transition-colors ease-in`}
+              onClick={() => setIsOpenMenu(false)}
             >
               TECHNOLOGY
             </Link>

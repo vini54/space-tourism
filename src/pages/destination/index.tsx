@@ -42,56 +42,52 @@ const Destination: NextPageWithLayout = () => {
             className={`${styles.content} w-full flex flex-col max-[900px]:items-center gap-8 sm:w-2/5 sm:min-w-[445px]`}
           >
             <nav
-              className={`${styles.contentNav} max-[900px]:w-fit pb-2 flex justify-start items-center gap-6 text-sm sm:text-base  relative text-slate-300`}
+              className={`${styles.contentNav} max-[900px]:w-fit pb-2 flex justify-start items-center gap-6 text-sm sm:text-base relative text-slate-300`}
             >
               <p
                 onClick={() => setPlanetTarget("moon")}
                 className={`${
-                  planetTarget === "moon" && "text-slate-50"
-                } cursor-pointer transition-colors duration-500`}
+                  planetTarget === "moon" &&
+                  "text-slate-50 border-b-2 border-slate-50"
+                } ${
+                  planetTarget !== "moon" && "border-transparent"
+                } cursor-pointer transition-all duration-500 pb-1 border-b-2  hover:text-slate-400 hover:border-slate-400`}
               >
                 MOON
               </p>
               <p
                 onClick={() => setPlanetTarget("mars")}
                 className={`${
-                  planetTarget === "mars" && "text-slate-50"
-                } cursor-pointer transition-colors duration-500`}
+                  planetTarget === "mars" &&
+                  "text-slate-50 border-b-2 border-slate-50"
+                } ${
+                  planetTarget !== "mars" && "border-transparent"
+                } cursor-pointer transition-all duration-500 pb-1 border-b-2 hover:text-slate-400 hover:border-slate-400`}
               >
                 MARS
               </p>
               <p
                 onClick={() => setPlanetTarget("europa")}
                 className={`${
-                  planetTarget === "europa" && "text-slate-50"
-                } cursor-pointer transition-colors duration-500`}
+                  planetTarget === "europa" &&
+                  "text-slate-50 border-b-2 border-slate-50"
+                } ${
+                  planetTarget !== "europa" && "border-transparent"
+                } cursor-pointer transition-all duration-500 pb-1 border-b-2 hover:text-slate-400 hover:border-slate-400`}
               >
                 EUROPA
               </p>
               <p
                 onClick={() => setPlanetTarget("titan")}
                 className={`${
-                  planetTarget === "titan" && "text-slate-50"
-                } cursor-pointer transition-colors duration-500`}
+                  planetTarget === "titan" &&
+                  "text-slate-50 border-b-2 border-slate-50"
+                } ${
+                  planetTarget !== "titan" && "border-transparent"
+                } cursor-pointer transition-all duration-500 pb-1 border-b-2 hover:text-slate-400 hover:border-slate-400`}
               >
                 TITAN
               </p>
-
-              <span
-                className={`${
-                  planetTarget === "moon"
-                    ? "translate-x-0"
-                    : planetTarget === "mars"
-                    ? "sm:translate-x-20 translate-x-[70px]"
-                    : planetTarget === "europa"
-                    ? "sm:translate-x-40 translate-x-[138px]"
-                    : planetTarget === "titan"
-                    ? "sm:translate-x-[262px] translate-x-[230px]"
-                    : "translate-x-0"
-                } ${
-                  planetTarget === "europa" ? "w-[84px]" : "sm:w-16 w-[58px]"
-                } h-[2px] bg-slate-50 absolute bottom-0 -left-1 transition-all duration-500 ease-in`}
-              />
             </nav>
 
             {planetTarget === "moon" && (
